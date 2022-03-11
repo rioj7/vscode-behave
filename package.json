@@ -1,0 +1,39 @@
+{
+  "name": "vscode-behave",
+  "displayName": "Behave",
+  "description": "Behave (bdd) formatter",
+  "publisher": "rioj7",
+  "license": "MIT",
+  "version": "0.1.0",
+  "engines": {"vscode": "^1.62.0"},
+  "categories": ["Formatters"],
+  "keywords": ["behave","behave formatter","bdd"],
+  "galleryBanner": {"color": "#000080", "theme": "dark"},
+  "activationEvents": ["onLanguage:Behave"],
+  "main": "./behave.js",
+  "browser": "./behave.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "Behave",
+        "extensions": ["feature"]
+      }
+    ],
+    "configuration": {
+      "title": "Behave",
+      "properties": {
+        "behave.format.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable the Behave Formatter."
+        }
+      }
+    }
+  },
+  "homepage": "https://github.com/rioj7/vscode-behave",
+  "bugs": { "url": "https://github.com/rioj7/vscode-behave/issues" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rioj7/vscode-behave.git"
+  }
+}

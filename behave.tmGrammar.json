@@ -1,0 +1,12 @@
+{
+  "scopeName": "source.behave",
+  "patterns": [
+    { "match": "(?i)^\\s*(Feature:|Scenario(?: Outline| Template)?:|Examples:|Background:)", "captures": { "1": { "name": "keyword" } } },
+    { "match": "(?i)^\\s*(Given|When|Then|And|But) ", "captures": { "1": { "name": "keyword" } } },
+    { "match": "@[\\w.]+", "name": "keyword.control" },
+    { "match": "^\\s*(#.*)", "captures": { "1": { "name": "comment.line.number-sign" } } },
+    { "match": "<[\\w ]+>", "name": "variable.other" },
+    { "begin": "\"\"\"", "end": "\"\"\"", "name": "string" },
+    { "begin": "^\\s*(\\|)", "end": "(\\|)\\s*$", "captures": { "1": { "name": "keyword.other" } }, "patterns": [ { "match": "\\|", "name": "keyword.other" } ] }
+  ]
+}

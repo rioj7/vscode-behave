@@ -3,7 +3,7 @@ const vscode = require('vscode');
 
 function activate(context) {
   const possibleTableRegex = new RegExp('^( +)(Given|Examples:)');
-  context.subscriptions.push(vscode.languages.registerDocumentFormattingEditProvider('Behave', {
+  context.subscriptions.push(vscode.languages.registerDocumentFormattingEditProvider('behave', {
     /** @param {vscode.TextDocument} document */
     provideDocumentFormattingEdits(document) {
       let possibleTable = false;

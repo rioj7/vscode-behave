@@ -17,5 +17,5 @@ It also works if you enable **Format on Save** setting.
 
 # TODO
 
-* syntax highlighting
+* syntax highlighting other languages (`# language: es`)
 * tab indented files

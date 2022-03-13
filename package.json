@@ -4,19 +4,28 @@
   "description": "Behave (bdd) formatter",
   "publisher": "rioj7",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "engines": {"vscode": "^1.62.0"},
   "categories": ["Formatters"],
   "keywords": ["behave","behave formatter","bdd"],
   "galleryBanner": {"color": "#000080", "theme": "dark"},
-  "activationEvents": ["onLanguage:Behave"],
+  "activationEvents": ["onLanguage:behave"],
   "main": "./behave.js",
   "browser": "./behave.js",
   "contributes": {
     "languages": [
       {
-        "id": "Behave",
-        "extensions": ["feature"]
+        "id": "behave",
+        "extensions": ["feature"],
+        "aliases": ["Behave"],
+        "configuration": "./behave.language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "behave",
+        "scopeName": "source.behave",
+        "path": "./behave.tmGrammar.json"
       }
     ],
     "configuration": {
